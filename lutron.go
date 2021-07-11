@@ -281,9 +281,9 @@ func (c *Conn) login(t *telnet.Conn) error {
 	if err := expect(t, "GNET> "); err != nil {
 		return err
 	}
-	if err := sendln(t, "#MONITORING,12,2"); err != nil {
-		return err
-	}
+	//if err := sendln(t, "#MONITORING,12,2"); err != nil {
+	//	return err
+	//}
 	t.SetReadDeadline(time.Time{})
 	return nil
 }
